@@ -1,4 +1,10 @@
 {% extends 'ai/layout.html' %}
 
 {% block body %}
+{% for article in articles %}
+<div class="article">
+    <div class="title">{{ article.title }}</div>
+    <div class="article_body">{{ article.body }}</div>
+</div>
+{% endfor %}
 {% endblock %}
