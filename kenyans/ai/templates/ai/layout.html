@@ -23,7 +23,7 @@
                 <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Fill Me In</a>
+                <a class="nav-link" href="{% url 'start' %}">Fill Me In</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'write' %}">Write</a>
@@ -33,6 +33,8 @@
         </div>
       </nav>
     {% block body %}
+    {% endblock %}
+    {% block script %}
     {% endblock %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

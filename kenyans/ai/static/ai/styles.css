@@ -79,3 +79,10 @@ body {
     flex-direction: column;
     max-width: 80vw;
 }
+
+#answer {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(51, 51, 196);
+    color: white;
+
+}
