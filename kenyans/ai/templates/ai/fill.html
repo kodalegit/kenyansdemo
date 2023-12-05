@@ -1,0 +1,14 @@
+{% extends 'ai/layout.html' %}
+
+{% block body %}
+<div class="mb-3">
+    <form action="{% url 'start' %}" method="post">
+        {% csrf_token %}
+        <label for="Prompt" class="form-label">Prompt</label>
+        <input class="form-control" type="text" placeholder="Prompt" name="prompt" aria-label="GPT Prompt">
+        <button class="btn btn-primary">Chat</button>
+    </form>
+   
+</div>
+
+{% endblock %}

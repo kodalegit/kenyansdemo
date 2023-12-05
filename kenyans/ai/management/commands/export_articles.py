@@ -1,6 +1,4 @@
-import json
 from django.core.management.base import BaseCommand
-from django.core.serializers import serialize
 from ...models import Articles
 
 class Command(BaseCommand):
@@ -10,12 +8,17 @@ class Command(BaseCommand):
         # Query all articles from the database
         articles_queryset = Articles.objects.all()
 
-        # Serialize the queryset to JSON
-        articles_json = serialize('json', articles_queryset)
+        # Prepare the articles as plain text
+        plain_text_articles = ""
+        for article in articles_queryset:
+            plain_text_articles += f"Title: {article.title}\n"
+            plain_text_articles += f"Author: {article.author}\n"
+            plain_text_articles += f"Time: {article.time}\n"
+            plain_text_articles += f"Body: {article.body}\n\n"
 
-        # Write JSON data to a file
-        json_file_path = 'articles.json'
-        with open(json_file_path, 'w') as json_file:
-            json_file.write(articles_json)
+        # Write plain text data to a file
+        text_file_path = 'articles.txt'
+        with open(text_file_path, 'w', encoding='utf-8') as text_file:
+            text_file.write(plain_text_articles)
 
-        self.stdout.write(self.style.SUCCESS(f'Successfully exported articles to {json_file_path}'))
+        self.stdout.write(self.style.SUCCESS(f'Successfully exported articles to {text_file_path}'))
