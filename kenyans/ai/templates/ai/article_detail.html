@@ -1,0 +1,10 @@
+{% extends 'ai/layout.html' %}
+
+{% block body %}
+<div class="article_view">
+    <h1>{{ article.title }}</h1>
+    <p class="author">Author: {{ article.author }}</p>
+    <p class="stamp">Posted on {{ article.time }}</p>
+    <p class="inside">{{ article.body }}</p>
+</div>
+{% endblock %}

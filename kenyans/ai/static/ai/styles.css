@@ -5,6 +5,77 @@ body {
     padding: 0;
 }
 
-.article{
+.article {
+    display: flex;
     
+}
+
+.article_view {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+.article_view > h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 700;
+}
+
+.article_view .author {
+    font-style: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.975rem;
+}
+
+.article_view .stamp {
+    font-style: italic;
+    font-size: 0.875rem;
+}
+
+.article_view .inside {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.25rem;
+    margin-top: 20px;
+}
+
+.landing_page {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    max-width: 1200px;
+    margin: 0, auto;
+}
+
+.landing_page a {
+    color:black;
+    display: flex;
+    border-color: gray;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    text-decoration-line: none;
+    position: relative;
+}
+
+.landing_page a:hover {
+    color:rgb(60, 61, 60);
+    text-decoration-line: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.article_body {
+    margin-top: 5px;
+    color: #555;
+    overflow: hidden; /* Hide any overflow for a brief snapshot effect */
+    text-overflow: ellipsis; /* Display an ellipsis for overflow text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.snapshot {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
 }
