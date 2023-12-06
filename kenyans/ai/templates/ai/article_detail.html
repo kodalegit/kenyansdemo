@@ -5,6 +5,7 @@
     <h1>{{ article.title }}</h1>
     <p class="author">Author: {{ article.author }}</p>
     <p class="stamp">Posted on {{ article.time }}</p>
+    <img src="{{ article.image_url }}" alt="Article Image" style="max-width: 60%; max-height: 30%; margin: 10px;">
     <p class="inside">{{ article.body }}</p>
 </div>
 {% endblock %}

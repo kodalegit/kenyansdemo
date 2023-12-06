@@ -11,7 +11,7 @@ class Articles(models.Model):
     link = models.SlugField(max_length=64, blank=True)
 
     def __str__(self):
-        return f"{self.title}: {self.body} posted at {self.time}"
+        return f"{self.title} posted at {self.time} by {self.author}"
     
     def save(self, *args, **kwargs):
         if not self.link:

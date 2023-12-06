@@ -2,7 +2,7 @@ from django.core.management.base import BaseCommand
 from ...models import Articles
 
 class Command(BaseCommand):
-    help = 'Export articles to a JSON file'
+    help = 'Export articles to a txt file'
 
     def handle(self, *args, **options):
         # Query all articles from the database
