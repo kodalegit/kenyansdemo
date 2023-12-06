@@ -94,4 +94,5 @@ body {
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Center horizontally */
     max-width: 60%; /* Maximum width for responsiveness */
+    overflow-y: auto;
 }
